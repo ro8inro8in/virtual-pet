@@ -1,36 +1,49 @@
 const pet = new Pet("Fido");
 pet.name;
 
-//constructor functions
-//object Pet 
+//const MAXIMUM_AGE = 50;
+const MAXIMUM_FITNESS = 10;
+//const MAXIMUM_APATITE = 20;
+//
+//---------------------------------------
+//-------constructor functions-----------
+//-----------object Pet------------------ 
 function Pet(name) {
   this.name = name;
   this.age = 0;
   this.appetite = 0;
   this.fitness = 10;
-  
-  
- //methods maybe I need if statements 
+ 
+ //methods 
+
   }
 Pet.prototype.growUp = function(){
     this.age += 1;
-}
-  Pet.prototype.feed = function (){
-    //this.appetite += 5;
-  if (this.appetite === this.age){
-      return this.appetite +=5;
+    this.appetite +=5
+    this.fitness -= 3;
+}/*
+Pet.prototype.growUp = function() {
+  if ((this.age += 1) <= MAXIMUM_AGE) {
+  } else {
+    this.age = MAXIMUM_AGE;   
+  }*/
+  
+/*Pet.prototype.growUp = function() {
+  if ((this.age += 5) >= MAXIMUM_APATITE) {
+    this.appetite
+  } else {
+    this.age = MAXIMUM_APATITE;   
+  } */
+
+Pet.prototype.walk = function() {
+  if ((this.fitness + 4) <= MAXIMUM_FITNESS) {
+    this.fitness += 4;
+  } else {
+    this.fitness = MAXIMUM_FITNESS;
+    
   }
 }
-Pet.prototype.gettingOld = function(){
-   // this.fitness -= 3;
-   if (this.fitness !== this.age){
-       return this.fitness -= 3;
-    }
-}
 
-
-
- 
 
 //if growUp applies to this.age 
 // if appetite is equal to age then + 5 to hunger 
