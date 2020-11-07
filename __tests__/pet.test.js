@@ -75,19 +75,34 @@ describe("checkUp", () => {
       expect(pet.checkUp()).toEqual("I need a walk");
     });
   it("if pet hunger gets above 5 return message",() => {
-    const pet = new Pet("Fido");
+    //const pet = new Pet("Fido");
     pet.growUp();
     expect(pet.checkUp()).toEqual("I am hungry");
   });
   it("if pet hunger is above 5 and fitness is below 3 return message ", () => {
-  const pet = new Pet("Fido"); 
+  //const pet = new Pet("Fido"); 
   pet.growUp();
   pet.fitness = 2;
   expect(pet.checkUp()).toBe("I am hungry and I need a walk");
   });
  it("returns I feel great! if fitness level is 4 or more & hunger level is 4 or less", () => {
-  const pet = new Pet("Fido");  
+ // const pet = new Pet("Fido");  
   expect(pet.checkUp()).toBe("I feel great!")
 });
 
 });
+describe("isAlive", () => {
+  let pet 
+    beforeEach(()=> {pet = new Pet('Fido')}); 
+  it("if age is less than 30 & appetite is less than 10 and fitness is more than 0 your pet is happy", () => {
+      pet.age = 0;
+      pet.appetite = 0;
+      pet.fitness = 10;
+
+      expect(pet.isAlive).toEqual(false);
+    });
+  });
+
+
+
+

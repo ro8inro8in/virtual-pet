@@ -17,6 +17,11 @@ function Pet(name) {
   this.fitness = 10;
   
 }
+Pet.prototype = {
+  get isAlive() {
+    return this.age < 30 && this.hunger < 10 && this.fitness > 0;
+  }
+};
 
 //methods
 Pet.prototype.growUp = function () {
