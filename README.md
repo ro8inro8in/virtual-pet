@@ -1,5 +1,20 @@
 VIRTUAL-PET
-A project to create a virtual pet that has all the characteristics of a real world pet, the main values of the pet are.
+A project to create a virtual pet that has all the characteristics of a real world pet using methods that we have learnt over the past few weeks.
+
+
+
+
+Tech and programs used 
+
+JavaScript
+Node REPL
+Node Package Manager
+Jest
+GitHub
+Git
+
+
+Features upon completion:
 
 You can give them a name
 
